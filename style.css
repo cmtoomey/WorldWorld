@@ -1,0 +1,61 @@
+body {
+  font-size: 1em;
+}
+#iPad {
+  background-image: url("UI.png");
+  background-size: cover;
+  width: 100%;
+  height: 768px;
+}
+#header{
+  position: relative;
+  height: 60px;
+  width: 100%;
+}
+#map{
+  position: relative;
+  height: 90%;
+  width: 100%;
+}
+#logo{
+  position: absolute;
+  /*border-width: 1px;
+  border-style: solid;
+  border-color: green;*/
+  height: 35px;
+  width: 35px;
+  left: 17px;
+  top:10px;
+}
+#bars{
+  position: absolute;
+  /*border-width: 1px;
+  border-style: solid;
+  border-color: yellow;*/
+  height: 35px;
+  width: 35px;
+  top: 10px;
+  left: 467px;
+}
+#lines{
+  position: absolute;
+  /*border-width: 1px;
+  border-style: solid;
+  border-color: blue;*/
+  height: 35px;
+  width: 35px;
+  top: 10px;
+  left: 523px;
+}
+#globe{
+  position: absolute;
+  background-image: url("http://www2.psd100.com/ppp/2013/10/0401/globe-icon-1004130929.png");
+  background-size: cover;
+  /*border-width: 1px;
+  border-style: solid;
+  border-color: red;*/
+  height: 25px;
+  width: 25px;
+  top: 15px;
+  left: 575px;
+}
