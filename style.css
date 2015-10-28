@@ -14,9 +14,8 @@ body {
 }
 #map {
   position: relative;
-  height: 90%;
+  height: 708px;
   width: 100%;
-  left: -5px;
 }
 #logo {
   position: absolute;
@@ -69,4 +68,11 @@ body {
   min-width: 125px;
   max-width: 300px;
   overflow: scroll;
+}
+#box{
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  right: 100px;
+  top: 50px;
 }

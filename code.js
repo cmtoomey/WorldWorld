@@ -1,5 +1,7 @@
 $(document).ready(function() {
   var color = "#123456";
+  var toggle = "visible";
+
   $("#globe").click(function() {
     mapboxgl.accessToken = 'pk.eyJ1IjoiZGF2aWRvaDkxIiwiYSI6IjQxN2IyMzFkNzgwODEwZjdiZGEzNzEzMTE1MjQyMzc5In0.NJQwPueh-IOZ7V14d8NILA';
     var map = new mapboxgl.Map({
@@ -43,11 +45,11 @@ $(document).ready(function() {
             center: features[0].geometry.coordinates
           });
           var tooltip = new mapboxgl.Popup()
-          .setHTML('<h1>'+features[0].properties.title+'</h1>'+'\n'+'<h2>'+features[0].properties.description+'</h2>')
-          .addTo(map);
+            .setHTML('<h1>' + features[0].properties.title + '</h1>' + '\n' + '<h2>' + features[0].properties.description + '</h2>')
+            .addTo(map);
         }
       });
-    })
+    });
 
   });
 })
