@@ -1,6 +1,14 @@
 $(document).ready(function() {
   var color = "#123456";
   var toggle = "visible";
+  //I'm not sure if this is doing anything
+  csv2geojson.csv2geojson('https://raw.githubusercontent.com/cmtoomey/WorldWorld/master/Starbucks.csv', {
+    latfield: 'Latitude',
+    lonfield: 'Longitude',
+    delimiter: ','
+  }, function(err, data) {});
+  //END Do-Nothing Section
+
 
   $("#globe").click(function() {
     mapboxgl.accessToken = 'pk.eyJ1IjoiZGF2aWRvaDkxIiwiYSI6IjQxN2IyMzFkNzgwODEwZjdiZGEzNzEzMTE1MjQyMzc5In0.NJQwPueh-IOZ7V14d8NILA';

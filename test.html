@@ -41,7 +41,8 @@
     // - The file must either be on the same domain as the page that requests it,
     //   or both the server it is requested from and the user's browser must
     //   support CORS.
-    omnivore.csv('https://raw.githubusercontent.com/cmtoomey/WorldWorld/master/Land_Use_Permits.csv').addTo(map);
+    var data = omnivore.csv('https://raw.githubusercontent.com/cmtoomey/WorldWorld/master/Starbucks.csv');
+    console.log(data);
   </script>
 
 
