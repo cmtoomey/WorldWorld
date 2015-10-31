@@ -1,13 +1,22 @@
 $(document).ready(function() {
   var color = "#123456";
   var toggle = "visible";
-  //I'm not sure if this is doing anything
-  csv2geojson.csv2geojson('https://raw.githubusercontent.com/cmtoomey/WorldWorld/master/Starbucks.csv', {
-    latfield: 'Latitude',
-    lonfield: 'Longitude',
-    delimiter: ','
-  }, function(err, data) {});
-  //END Do-Nothing Section
+
+//Now this is doing something
+  $.ajax('https://raw.githubusercontent.com/cmtoomey/WorldWorld/master/Starbucks.csv', {
+    success: function(csv, status, req) {
+      csv2geojson.csv2geojson(csv, {
+        latfield: 'Latitude',
+        lonfield: 'Longitude',
+        delimiter: ','
+        }, function(err, geojson) {
+          console.log(geojson)
+//This is where your geojson is returned ^^
+      });
+    },
+    error: function(req, status, error) {
+    }
+  });
 
 
   $("#globe").click(function() {
