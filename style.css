@@ -69,7 +69,7 @@ body {
   max-width: 300px;
   overflow: scroll;
 }
-#box{
+#box {
   position: absolute;
   height: 100px;
   width: 100px;
