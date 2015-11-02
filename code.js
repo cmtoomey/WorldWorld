@@ -4,21 +4,21 @@ $(document).ready(function() {
   var long = '';
   var toggle = "visible";
 
-//Now this is doing something
-  $.ajax('https://raw.githubusercontent.com/cmtoomey/WorldWorld/master/Starbucks.csv', {
-    success: function(csv, status, req) {
-      csv2geojson.csv2geojson(csv, {
-        latfield: 'Latitude',
-        lonfield: 'Longitude',
-        delimiter: ','
-        }, function(err, geojson) {
-          console.log(geojson)
-//This is where your geojson is returned ^^
-      });
-    },
-    error: function(req, status, error) {
-    }
-  });
+  // //Now this is doing something
+  //   $.ajax('https://raw.githubusercontent.com/cmtoomey/WorldWorld/master/Starbucks.csv', {
+  //     success: function(csv, status, req) {
+  //       csv2geojson.csv2geojson(csv, {
+  //         latfield: 'Latitude',
+  //         lonfield: 'Longitude',
+  //         delimiter: ','
+  //         }, function(err, geojson) {
+  //           console.log(geojson)
+  // //This is where your geojson is returned ^^
+  //       });
+  //     },
+  //     error: function(req, status, error) {
+  //     }
+  //   });
 
   function getGeo() {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -32,10 +32,10 @@ $(document).ready(function() {
   getGeo();
 
   $("#globe").click(function() {
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZGF2aWRvaDkxIiwiYSI6IjQxN2IyMzFkNzgwODEwZjdiZGEzNzEzMTE1MjQyMzc5In0.NJQwPueh-IOZ7V14d8NILA';
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZGF0YWJsaWNrIiwiYSI6IjM5anE0eTQifQ.XfwI7Wcu7EFKoKiTQldy5Q';
     var map = new mapboxgl.Map({
       container: 'map', // container id
-      style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
+      style: 'mapbox://styles/datablick/cigcgknf400009ilyxy7b2375',
       center: [long, lat], // starting position
       zoom: 10 // starting zoom
     });
@@ -78,7 +78,7 @@ $(document).ready(function() {
         }
       });
     });
-    $('#logo').click(function(){
+    $('#logo').click(function() {
       map.setPaintProperty('water', 'fill-color', '#f03b20')
     });
 
