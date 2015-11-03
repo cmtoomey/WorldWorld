@@ -14,7 +14,7 @@ body {
 }
 #map {
   position: relative;
-  height: 708px;
+  height: 696px;
   width: 100%;
 }
 #logo {
@@ -70,9 +70,18 @@ body {
   overflow: scroll;
 }
 #box {
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  background-color: white;
   position: absolute;
-  height: 100px;
-  width: 100px;
-  right: 100px;
-  top: 50px;
+  min-height: 200px;
+  width: 250px;
+  right: 25px;
+  top: 100px;
+}
+#geocoder {
+  position: absolute;
+  top: 75px;
+  right: 20px;
 }

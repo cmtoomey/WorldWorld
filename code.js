@@ -1,8 +1,10 @@
 $(document).ready(function() {
+  $("#radio").buttonset();
   var color = "#123456";
   var lat = '';
   var long = '';
   var toggle = "visible";
+  var search = '';
 
   // //Now this is doing something
   //   $.ajax('https://raw.githubusercontent.com/cmtoomey/WorldWorld/master/Starbucks.csv', {
@@ -22,10 +24,8 @@ $(document).ready(function() {
 
   function getGeo() {
     navigator.geolocation.getCurrentPosition(function(position) {
-      console.log(position.coords.latitude, position.coords.longitude);
       lat = position.coords.latitude;
       long = position.coords.longitude;
-      console.log(long, lat);
     });
   }
 
@@ -44,6 +44,33 @@ $(document).ready(function() {
       data: url
     });
 
+    function searchValue() {
+      raw = document.getElementById("geocoder").value;
+      processed = raw.split(' ').join('+');
+      geocoder = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + processed + '.json?access_token=pk.eyJ1IjoiY210b29tZXkiLCJhIjoiUWQyeTJqMCJ9.MFgvZXmgNt6WzrzP9kJgUA';
+      var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": geocoder,
+        "method": "GET"
+      }
+
+      $.ajax(settings).done(function(response) {
+        center = response.features[0].geometry.coordinates;
+        map.flyTo({
+          center: center,
+          zoom: 12,
+          bearing: 0,
+          speed: .75,
+          curve: .80,
+        })
+      });
+    };
+
+    $("#logo").click(function() {
+      searchValue();
+    });
+
     map.on('style.load', function() {
       map.addSource('drone', source);
       map.addLayer({
@@ -55,8 +82,8 @@ $(document).ready(function() {
         "paint": {
           "circle-color": color,
           "circle-radius": "12",
-          "circle-opacity": .5,
-          "circle-blur": .25
+          "circle-opacity": .75,
+          "circle-blur": .15
         }
       });
     });
@@ -77,9 +104,6 @@ $(document).ready(function() {
             .addTo(map);
         }
       });
-    });
-    $('#logo').click(function() {
-      map.setPaintProperty('water', 'fill-color', '#f03b20')
     });
 
   });
