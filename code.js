@@ -67,8 +67,11 @@ $(document).ready(function() {
       });
     };
 
-    $("#logo").click(function() {
-      searchValue();
+    $(document).keypress(function(e) {
+    if(e.which == 13) {
+        //alert('You pressed enter!');
+        searchValue();
+      }
     });
 
     map.on('style.load', function() {
