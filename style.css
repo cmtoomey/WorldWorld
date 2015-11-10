@@ -1,5 +1,6 @@
 body {
   font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
 }
 #iPad {
   background-image: url("UI.png");
@@ -60,6 +61,7 @@ body {
   left: 575px;
 }
 .mapboxgl-popup-content {
+  font-family: 'Open Sans', sans-serif;
   position: absolute;
   left: -10px;
   top: 10px;

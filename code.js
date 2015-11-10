@@ -35,7 +35,7 @@ $(document).ready(function() {
     mapboxgl.accessToken = 'pk.eyJ1IjoiZGF0YWJsaWNrIiwiYSI6IjM5anE0eTQifQ.XfwI7Wcu7EFKoKiTQldy5Q';
     var map = new mapboxgl.Map({
       container: 'map', // container id
-      style: 'mapbox://styles/datablick/cigcgknf400009ilyxy7b2375',
+      style: 'mapbox://styles/datablick/cigpi9ljm003wa6kswn149dry',
       center: [long, lat], // starting position
       zoom: 10 // starting zoom
     });
