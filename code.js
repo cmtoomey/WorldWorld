@@ -1,10 +1,15 @@
 $(document).ready(function() {
-  $("#radio").buttonset();
   var color = "#123456";
   var lat = '';
   var long = '';
-  var toggle = "visible";
   var search = '';
+  $("#colorPicker1").tinycolorpicker();
+  var owl = $("#owl-demo");
+  owl.owlCarousel({
+    items: 3, //10 items above 1000px browser width
+    singleItem: true,
+    pagination: false
+  });
 
   // //Now this is doing something
   //   $.ajax('https://raw.githubusercontent.com/cmtoomey/WorldWorld/master/Starbucks.csv', {
@@ -68,8 +73,7 @@ $(document).ready(function() {
     };
 
     $(document).keypress(function(e) {
-    if(e.which == 13) {
-        //alert('You pressed enter!');
+      if (e.which == 13) {
         searchValue();
       }
     });

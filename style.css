@@ -88,3 +88,73 @@ body {
   right: 20px;
   font-size: 64px;
 }
+#settings {
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  border-radius: 5px;
+  border-color: rgb(141, 142, 141);
+  box-shadow: 1px 1px 1px #888888;
+  border-style: solid;
+  border-width: 1px;
+  background-color: white;
+  top: 110px;
+  right: 20px;
+  height: 600px;
+  width: 225px;
+}
+#Properties{
+  position: relative;
+  /*top: 10px;*/
+  height: 100px;
+  width: 95%;
+  left: 2.5%;
+}
+#Shelves{
+  position: relative;
+  top: 40px;
+  height: 100px;
+  width: 95%;
+  left: 2.5%;
+}
+#Colorpicker{
+  position: relative;
+  top: 100px;
+  left: 2.5%
+}
+#colorPicker1{
+  position: relative;
+  top: 60px;
+}
+#owl-demo .item{
+  background: #3fbf79;
+  padding: 5px 5px;
+  margin: 5px;
+  color: #FFF;
+  height: 75px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#owl-demo1 .item{
+  background: #3fbf79;
+  padding: 5px 5px;
+  margin: 5px;
+  color: #FFF;
+  height: 75px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+.dropzone {
+    display: inline-block;
+    margin: 5px;
+    width: 90px;
+    height: 90px;
+    border: 1px solid #a4a4a3;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
