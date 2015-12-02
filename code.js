@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var color = "#123456";
+  var color = "#00592D";
   var lat = '';
   var long = '';
   var search = '';
@@ -88,9 +88,8 @@ $(document).ready(function() {
         "type": "circle",
         "paint": {
           "circle-color": color,
-          "circle-radius": "12",
-          "circle-opacity": .75,
-          "circle-blur": .15
+          "circle-radius": "7",
+          "circle-opacity": .65
         }
       });
     });
